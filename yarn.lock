@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@vntk/dictionary@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@vntk/dictionary/-/dictionary-1.0.0.tgz#59fd0e6abcbaab55abe3a3e64ed92e89be2fab75"
+  integrity sha512-KT5b8pDjU9pNrkBfOwz6SJUrCwVc1R3ZeFU7Ara4xaNZXMUMUI7dD9do3QxT+ZmobBUbBd6OJVCTpP894AwfxQ==
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
