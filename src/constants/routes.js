@@ -1,3 +1,4 @@
 module.exports = {
-    LANGUAGE: "/api/language",
-  };
+  LANGUAGE: "/api/language",
+  AUTH: "/auth",
+};
