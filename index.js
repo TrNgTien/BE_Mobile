@@ -18,7 +18,7 @@ const PORT = 8080;
 
 routes(app);
 app.get("/", (req, res) => {
-  return res.send("REST called successfully!");
+  return res.send("Dit me lon Nguyen an cut!");
 });
 
 server.listen(PORT, () => {
