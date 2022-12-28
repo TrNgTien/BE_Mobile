@@ -4,7 +4,7 @@ module.exports = {
   getInfor: async (req, res) => {
     const userId = req.query.id;
     console.log(req.query);
-    let data;
+    let data = {};
     const snapshot = await db.collection("user").get();
     snapshot.forEach((doc) => {
       if (doc.data().id === userId) {
@@ -13,10 +13,17 @@ module.exports = {
     });
 
     const recordSnapshot = await db.collection("record").get();
-    const latestRecord = Math.max.apply(Math, recordSnapshot.map((doc) => doc.data().startTime));
+    const records = [];
+    recordSnapshot.forEach((doc) => {
+      if (doc.data().userId === userId) {
+        records.add(doc.data());
+      }
+    })
+    const latestRecord = Math.max.apply(Math, records.map((record) => record.startTime));
     
     if (data) {
-      data.add(latestRecord);
+      console.log(data);
+      data.latestRecord = latestRecord ? latestRecord : null;
       res.status(200).json(data);
 
     } else res.status(401).send("No information");
